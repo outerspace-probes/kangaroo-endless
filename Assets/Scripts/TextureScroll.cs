@@ -5,7 +5,7 @@ using UnityEngine;
 public class TextureScroll : MonoBehaviour
 {
     Material bgMaterial;
-    public float scrollSpeed = .1f;
+    public float scrollSpeed = 10f;
     public bool scroll = true;
 
     private void Awake()
@@ -23,7 +23,8 @@ public class TextureScroll : MonoBehaviour
     {
         if(scroll)
         {
-            Vector2 offset = new Vector2(scrollSpeed * Time.time, 0);
+            float scrollOffsetX = scrollSpeed * (GameManager.instance.gameSpeed / 100000) * Time.time;
+            Vector2 offset = new Vector2(scrollOffsetX, 0);
             bgMaterial.mainTextureOffset = offset;
         }
     }

@@ -10,7 +10,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public GameObject gameOverPanel;
     public Text scoreText;
+    public float gameSpeed = 100;
     int score = 0;
+
 
     private void Awake()
     {
@@ -35,10 +37,23 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         ObstacleSpawner.instance.gameOver = true;
+        BgObjSpawner[] bgSpawners = FindObjectsOfType<BgObjSpawner>();
+        foreach(BgObjSpawner spawner in bgSpawners)
+        {
+            spawner.gameOver = true;
+        }
+
         StopScrolling();
         gameOverPanel.SetActive(true);
+
         Obstacle[] obstacles = FindObjectsOfType<Obstacle>();
         foreach (Obstacle obj in obstacles)
+        {
+            obj.gameOver = true;
+        }
+
+        BgObject[] bgObjs = FindObjectsOfType<BgObject>();
+        foreach (BgObject obj in bgObjs)
         {
             obj.gameOver = true;
         }

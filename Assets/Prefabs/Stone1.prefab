@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 844584400739486000}
   - component: {fileID: 844584400739486001}
   - component: {fileID: 844584400739486002}
-  - component: {fileID: 844584400739486003}
   - component: {fileID: 1495897368}
+  - component: {fileID: 5069413739921161271}
   m_Layer: 0
-  m_Name: Crate
+  m_Name: Stone1
   m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5a0a286df7cfc6643b78808d1a4e775a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 097a63688981c8b4eb8d88e18173ea86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,32 +106,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &844584400739486003
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844584400739486006}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.505, y: 0.505}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 1.01, y: 1.01}
-    newSize: {x: 1.01, y: 1.01}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01}
-  m_EdgeRadius: 0
 --- !u!114 &1495897368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,6 +120,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   gameOver: 0
+--- !u!60 &5069413739921161271
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844584400739486006}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 6.3, y: 2.11}
+    newSize: {x: 1.01, y: 1.01}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 3.7069983, y: 0.16571581}
+      - {x: 3.324517, y: 0.98100173}
+      - {x: 2.6599998, y: 1.8}
+      - {x: 2.4199998, y: 1.9799999}
+      - {x: 2.31, y: 2.03}
+      - {x: 1.7549441, y: 2.0608826}
+      - {x: 1.4217014, y: 1.6158737}
+      - {x: 0.76, y: 0.42999998}
+      - {x: 0.72999996, y: 0.37}
+      - {x: 0.72999996, y: 0.25}
+      - {x: 0.77, y: 0.17}
+      - {x: 0.82, y: 0.14}
+      - {x: 1.1, y: 0.089999996}
 --- !u!1001 &6290624742495490436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -156,12 +168,12 @@ PrefabInstance:
     - target: {fileID: 4950425805528128394, guid: 8a29ffc7f20094a4b8bb5827be85d80e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.611
       objectReference: {fileID: 0}
     - target: {fileID: 4950425805528128394, guid: 8a29ffc7f20094a4b8bb5827be85d80e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.061
       objectReference: {fileID: 0}
     - target: {fileID: 4950425805528128394, guid: 8a29ffc7f20094a4b8bb5827be85d80e,
         type: 3}

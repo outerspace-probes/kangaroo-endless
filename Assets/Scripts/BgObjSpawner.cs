@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObstacleSpawner : MonoBehaviour
+public class BgObjSpawner : MonoBehaviour
 {
-    public static ObstacleSpawner instance;
+    public static BgObjSpawner instance;
 
-    public GameObject[] obstacles;
+    public BgObject[] bgObjects;
     public bool gameOver = false;
     [SerializeField] float waitTimeMin = 1f;
     [SerializeField] float waitTimeMax = 2.5f;
+    [SerializeField] float moveSpeed = .7f;
 
     private void Awake()
     {
@@ -31,18 +32,18 @@ public class ObstacleSpawner : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         while (!gameOver)
-        {          
-            SpawnObstacle();
+        {
+            SpawnObject();
             float gameSpeedFactor = GameManager.instance.gameSpeed / 100;
             waitTime = Random.Range(waitTimeMin / gameSpeedFactor, waitTimeMax / gameSpeedFactor);
             yield return new WaitForSeconds(waitTime);
         }
     }
 
-    void SpawnObstacle()
+    void SpawnObject()
     {
-        int rnd = Random.Range(0, obstacles.Length);
-        Instantiate(obstacles[rnd], transform.position, Quaternion.identity);
+        int rnd = Random.Range(0, bgObjects.Length);
+        BgObject obj = Instantiate(bgObjects[rnd], transform.position, Quaternion.identity);
+        obj.SetSpeed(moveSpeed); 
     }
-
 }
