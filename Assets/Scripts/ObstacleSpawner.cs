@@ -8,14 +8,21 @@ public class ObstacleSpawner : MonoBehaviour
 
     public GameObject[] obstacles;
     public bool gameOver = false;
-    [SerializeField] float waitTimeMin = 1f;
-    [SerializeField] float waitTimeMax = 2.5f;
+    [SerializeField] float easyWaitTimeMin = 4f;
+    [SerializeField] float easyWaitTimeMax = 6f;
+    [SerializeField] float hardWaitTimeMin = 2.4f;
+    [SerializeField] float hardWaitTimeMax = 2.6f;
+    [SerializeField] float hardnessIncreaseSpeed = 100;
+    [SerializeField] float waitTimeMin;
+    [SerializeField] float waitTimeMax;
 
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
+            waitTimeMin = easyWaitTimeMin;
+            waitTimeMax = easyWaitTimeMax;
         }
     }
 
@@ -23,6 +30,18 @@ public class ObstacleSpawner : MonoBehaviour
     void Start()
     {
         StartCoroutine("Spawn");
+    }
+
+    private void Update()
+    {
+        if(waitTimeMin >= hardWaitTimeMin)
+        {
+            waitTimeMin -= (hardnessIncreaseSpeed / 10000) * Time.deltaTime;
+        }
+        if(waitTimeMax >= hardWaitTimeMax)
+        {
+            waitTimeMax -= (hardnessIncreaseSpeed / 10000) * Time.deltaTime;
+        }
     }
 
     IEnumerator Spawn()

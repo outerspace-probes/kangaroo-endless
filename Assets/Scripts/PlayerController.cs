@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
     {
         grounded = false;
         rbody.velocity = new Vector2(0,1 * jumpForce);
-        animator.SetTrigger("Jump");
+        animator.Play("PlayerJump");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.tag == "ground")
         {
             grounded = true;
+            animator.Play("PlayerRun");
         }
     }
 
@@ -70,7 +71,7 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.tag == "obstacle")
         {
             Destroy(collision.gameObject);
-            animator.Play("PlayerDie");
+            animator.enabled = false;
             GameManager.instance.GameOver();
             gameOver = true;
         }
