@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float jumpForceMax = 12;
     [SerializeField] float jumpForceLoadingSpeed = 5;
     [SerializeField] ProgressBar jumpForceProgressBar;
+    [SerializeField] GameObject exploParticles;
 
     private void Awake()
     {
@@ -70,8 +71,11 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.tag == "obstacle")
         {
-            Destroy(collision.gameObject);
-            animator.enabled = false;
+            // Destroy(collision.gameObject);
+            GameObject explo = Instantiate(exploParticles, transform.position, Quaternion.identity);
+            Destroy(explo, 2);
+            Destroy(gameObject);
+            // animator.enabled = false;
             GameManager.instance.GameOver();
             gameOver = true;
         }

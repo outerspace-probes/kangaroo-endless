@@ -6,6 +6,7 @@ public class ObstacleSpawner : MonoBehaviour
 {
     public static ObstacleSpawner instance;
 
+    public GameObject koalaItem;
     public GameObject powerupItem;
     public GameObject[] obstacles;
     public bool gameOver = false;
@@ -15,6 +16,7 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] float hardWaitTimeMax = 2.6f;
     [SerializeField] float hardnessIncreaseSpeed = 100;
     [SerializeField] int koalaChanceOneTo = 3;
+    [SerializeField] int powerupChanceOneTo = 3;
     [SerializeField] float waitTimeMin;
     [SerializeField] float waitTimeMax;
 
@@ -57,13 +59,17 @@ public class ObstacleSpawner : MonoBehaviour
             float gameSpeedFactor = GameManager.instance.gameSpeed / 100;
 
             int spawnPwr = Random.Range(1, koalaChanceOneTo + 1);
-            print(spawnPwr);
             if (spawnPwr == 1)
             {
                 yield return new WaitForSeconds(1 / gameSpeedFactor);
+                SpawnKoala();
+            }
+
+            spawnPwr = Random.Range(1, powerupChanceOneTo + 1);
+            if (spawnPwr == 1)
+            {
+                yield return new WaitForSeconds(Random.Range(1,4) / gameSpeedFactor);
                 SpawnPowerup();
-                // waitTime = Random.Range(waitTimeMin / gameSpeedFactor, waitTimeMax / gameSpeedFactor);
-                // yield return new WaitForSeconds(waitTime);
             }
 
             waitTime = Random.Range(waitTimeMin / gameSpeedFactor, waitTimeMax / gameSpeedFactor);
@@ -74,6 +80,11 @@ public class ObstacleSpawner : MonoBehaviour
     void SpawnPowerup()
     {
         Instantiate(powerupItem, transform.position, Quaternion.identity);
+    }
+
+    void SpawnKoala()
+    {
+        Instantiate(koalaItem, transform.position, Quaternion.identity);
     }
 
     void SpawnObstacle()
