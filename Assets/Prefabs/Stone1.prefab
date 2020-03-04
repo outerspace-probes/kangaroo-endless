@@ -118,8 +118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36d524992053c1c478be84f79da1eb8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   gameOver: 0
+  exploParticles: {fileID: 17688579793629759, guid: 62fdd43e9df58a54fbe5d42f62773d21,
+    type: 3}
 --- !u!60 &5069413739921161271
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -224,6 +225,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ObstacleSkipBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766176444584842735, guid: 8a29ffc7f20094a4b8bb5827be85d80e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8860879903585454798, guid: 8a29ffc7f20094a4b8bb5827be85d80e,
         type: 3}

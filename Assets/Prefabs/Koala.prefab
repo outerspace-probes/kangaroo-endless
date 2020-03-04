@@ -113,6 +113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: 0
+  exploParticles: {fileID: 17688579793629759, guid: 62fdd43e9df58a54fbe5d42f62773d21,
+    type: 3}
 --- !u!50 &3727841602459203504
 Rigidbody2D:
   serializedVersion: 4

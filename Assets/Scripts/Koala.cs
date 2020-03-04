@@ -6,6 +6,7 @@ public class Koala : MonoBehaviour
 {
     Rigidbody2D rbody;
     public bool gameOver = false;
+    [SerializeField] GameObject exploParticles;
 
     private void Awake()
     {
@@ -29,6 +30,17 @@ public class Koala : MonoBehaviour
     {
         if (transform.position.x < -15f)
         {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            GameManager.instance.IncrementKoalas();
+            GameObject explo = Instantiate(exploParticles, transform.position, Quaternion.identity);
+            Destroy(explo, 2);
             Destroy(gameObject);
         }
     }

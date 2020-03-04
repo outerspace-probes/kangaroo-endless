@@ -6,6 +6,7 @@ public class PowerupStar : MonoBehaviour
 {
     Rigidbody2D rbody;
     public bool gameOver = false;
+    public GameObject exploParticles;
 
     private void Awake()
     {
@@ -29,6 +30,16 @@ public class PowerupStar : MonoBehaviour
     {
         if (transform.position.x < -15f)
         {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            GameObject explo = Instantiate(exploParticles, transform.position, Quaternion.identity);
+            Destroy(explo, 2);
             Destroy(gameObject);
         }
     }

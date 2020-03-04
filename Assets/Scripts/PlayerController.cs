@@ -71,17 +71,26 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.tag == "obstacle")
         {
-            // Destroy(collision.gameObject);
-            GameObject explo = Instantiate(exploParticles, transform.position, Quaternion.identity);
-            Destroy(explo, 2);
-            Destroy(gameObject);
-            // animator.enabled = false;
-            GameManager.instance.GameOver();
-            gameOver = true;
+            if(GameManager.instance.isPowerup == false)
+            {
+                // Destroy(collision.gameObject);
+                GameObject explo = Instantiate(exploParticles, transform.position, Quaternion.identity);
+                Destroy(explo, 2);
+                Destroy(gameObject);
+                // animator.enabled = false;
+                GameManager.instance.GameOver();
+                gameOver = true;
+            }
+
         }
         else if(collision.gameObject.tag == "obstacle-skip")
         {
             GameManager.instance.IncrementScore();
+        }
+        else if (collision.gameObject.tag == "powerup")
+        {
+            print("pwr hit");
+            GameManager.instance.PowerUp();
         }
     }
 }

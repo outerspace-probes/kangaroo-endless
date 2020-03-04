@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 827164616400416618}
   m_Layer: 0
   m_Name: star
-  m_TagString: Untagged
+  m_TagString: powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,6 +144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: 0
+  exploParticles: {fileID: 17688579793629759, guid: 987ebb25c5730ca41bbfbac8474051f7,
+    type: 3}
 --- !u!1 &827164617064830689
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +157,7 @@ GameObject:
   - component: {fileID: 827164617064830688}
   m_Layer: 0
   m_Name: PowerupStar
-  m_TagString: Untagged
+  m_TagString: powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
