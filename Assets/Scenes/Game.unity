@@ -1760,7 +1760,7 @@ MonoBehaviour:
   hardWaitTimeMax: 2.6
   hardnessIncreaseSpeed: 100
   koalaChanceOneTo: 2
-  powerupChanceOneTo: 3
+  powerupChanceOneTo: 4
   waitTimeMin: 0
   waitTimeMax: 0
 --- !u!1 &1593084200
