@@ -59,7 +59,7 @@ public class ObstacleSpawner : MonoBehaviour
             float gameSpeedFactor = GameManager.instance.gameSpeed / 100;
 
             int spawnPwr = Random.Range(1, koalaChanceOneTo + 1);
-            print("koala rnd " + spawnPwr.ToString());
+            // print("koala rnd " + spawnPwr.ToString());
             if (spawnPwr == 1)
             {
                 yield return new WaitForSeconds(1 / gameSpeedFactor);
@@ -67,7 +67,7 @@ public class ObstacleSpawner : MonoBehaviour
             }
 
             spawnPwr = Random.Range(1, powerupChanceOneTo + 1);
-            print("pwrup rnd " + spawnPwr.ToString());
+            // print("pwrup rnd " + spawnPwr.ToString());
             if (spawnPwr == 1)
             {
                 yield return new WaitForSeconds(Random.Range(1.5f,3) / gameSpeedFactor);

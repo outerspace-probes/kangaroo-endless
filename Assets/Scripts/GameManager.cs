@@ -152,7 +152,7 @@ public class GameManager : MonoBehaviour
 
     public void PowerUp()
     {
-        print("manager PowerUp called");
+        // print("manager PowerUp called");
         powerupTimeLeft = powerupTime;
         isPowerup = true;
     }

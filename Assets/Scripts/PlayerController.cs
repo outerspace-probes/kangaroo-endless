@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "powerup")
         {
-            print("pwr hit");
+            // print("pwr hit");
             GameManager.instance.PowerUp();
         }
     }
