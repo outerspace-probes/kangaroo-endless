@@ -161,12 +161,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18500e6ff13393742a71a0590674a0a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 0
   jumpForceMin: 5
   jumpForceMax: 12
   jumpForceLoadingSpeed: 650
   jumpForceProgressBar: {fileID: 0}
-  exploParticles: {fileID: 17688579793629759, guid: 62fdd43e9df58a54fbe5d42f62773d21,
+  exploParticlesPrefab: {fileID: 17688579793629759, guid: 62fdd43e9df58a54fbe5d42f62773d21,
     type: 3}
 --- !u!95 &8973275648351966006
 Animator:

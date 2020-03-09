@@ -43,6 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aff0e3ab71a5a2d49a22352805e35a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  easyWaitTimeMin: 4.2
+  easyWaitTimeMax: 6
+  hardWaitTimeMin: 2.4
+  hardWaitTimeMax: 2.6
+  hardnessIncreaseSpeed: 100
+  koalaChanceOneTo: 2
+  powerupChanceOneTo: 4
+  waitTimeMin: 0
+  waitTimeMax: 0
   koalaItem: {fileID: 8425832184956193429, guid: 889dc3bc3eb1c0b41991a3ad488abf46,
     type: 3}
   powerupItem: {fileID: 827164617064830689, guid: 1aaf3b2624080234eb92cdccbd72d423,
@@ -52,12 +61,3 @@ MonoBehaviour:
   - {fileID: 5942911879979258274, guid: 086faf6b63d537d42885e6800542b65d, type: 3}
   - {fileID: 8629962912050367463, guid: 11c3606bf645275479ea57cd794a360f, type: 3}
   gameOver: 0
-  easyWaitTimeMin: 4
-  easyWaitTimeMax: 6
-  hardWaitTimeMin: 2.4
-  hardWaitTimeMax: 2.6
-  hardnessIncreaseSpeed: 100
-  koalaChanceOneTo: 2
-  powerupChanceOneTo: 4
-  waitTimeMin: 0
-  waitTimeMax: 0

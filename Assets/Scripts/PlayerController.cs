@@ -8,12 +8,12 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     bool grounded;
     bool gameOver = false;
-    [SerializeField] float jumpForce = 0;
+    float jumpForce = 0;
     [SerializeField] float jumpForceMin = 4;
     [SerializeField] float jumpForceMax = 12;
     [SerializeField] float jumpForceLoadingSpeed = 5;
     [SerializeField] ProgressBar jumpForceProgressBar;
-    [SerializeField] GameObject exploParticles;
+    [SerializeField] GameObject exploParticlesPrefab;
 
     private void Awake()
     {
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
             if(GameManager.instance.isPowerup == false)
             {
                 // Destroy(collision.gameObject);
-                GameObject explo = Instantiate(exploParticles, transform.position, Quaternion.identity);
+                GameObject explo = Instantiate(exploParticlesPrefab, transform.position, Quaternion.identity);
                 Destroy(explo, 2);
                 Destroy(gameObject);
                 // animator.enabled = false;

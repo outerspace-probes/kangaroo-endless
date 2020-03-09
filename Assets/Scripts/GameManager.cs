@@ -7,20 +7,20 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public float initGameSpeed = 100;
+    public float powerupGameSpeed = 300;
+    public float powerupTime = 5;
 
     public static GameManager instance;
     public GameObject gameOverPanel;
     public Text scoreText;
     public Text koalasText;
     public ParticleSystem playerPowerupParticles;
-    public float gameSpeed = 100;
-    public float initGameSpeed = 100;
-    public float powerupGameSpeed = 300;
-    public float powerupTime = 5;
+    [HideInInspector] public float gameSpeed = 100;
     int score = 0;
     int koalas = 0;
-    public bool isPowerup = false;
-    public float powerupTimeLeft = 0;
+    [HideInInspector] public bool isPowerup = false;
+    [HideInInspector] public float powerupTimeLeft = 0;
     float powerupAcceleration = 150;
 
     private void Awake()

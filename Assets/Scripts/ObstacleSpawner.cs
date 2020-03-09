@@ -6,10 +6,6 @@ public class ObstacleSpawner : MonoBehaviour
 {
     public static ObstacleSpawner instance;
 
-    public GameObject koalaItem;
-    public GameObject powerupItem;
-    public GameObject[] obstacles;
-    public bool gameOver = false;
     [SerializeField] float easyWaitTimeMin = 4f;
     [SerializeField] float easyWaitTimeMax = 6f;
     [SerializeField] float hardWaitTimeMin = 2.4f;
@@ -19,6 +15,12 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] int powerupChanceOneTo = 3;
     [SerializeField] float waitTimeMin;
     [SerializeField] float waitTimeMax;
+
+    public GameObject koalaItem;
+    public GameObject powerupItem;
+    public GameObject[] obstacles;
+    public bool gameOver = false;
+
 
     private void Awake()
     {
