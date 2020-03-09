@@ -800,6 +800,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5930102194900373289, guid: 8c33fca8281521a42816b1077963649a,
+        type: 3}
+      propertyPath: easyWaitTimeMin
+      value: 4.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5930102194900373290, guid: 8c33fca8281521a42816b1077963649a,
         type: 3}
       propertyPath: m_LocalPosition.x
