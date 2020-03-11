@@ -46,6 +46,6 @@ MonoBehaviour:
   bgObjects:
   - {fileID: 2336403880873234815, guid: e8ffe31b7db04034bbfa94419c6605fd, type: 3}
   gameOver: 0
-  waitTimeMin: 12
-  waitTimeMax: 12
-  moveSpeed: 1.4
+  waitTimeMin: 8
+  waitTimeMax: 8
+  moveSpeed: 1.63
