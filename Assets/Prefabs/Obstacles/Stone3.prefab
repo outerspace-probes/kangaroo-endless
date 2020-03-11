@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: 0
-  exploParticles: {fileID: 17688579793629759, guid: 62fdd43e9df58a54fbe5d42f62773d21,
+  exploParticles: {fileID: 6243197351025817459, guid: db820e6be284e7743aed0b260e87e3e7,
     type: 3}
 --- !u!60 &8610580127318596099
 PolygonCollider2D:
