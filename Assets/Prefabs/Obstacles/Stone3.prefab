@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: 0
-  exploParticles: {fileID: 6243197351025817459, guid: db820e6be284e7743aed0b260e87e3e7,
+  exploParticles: {fileID: 1344189617571306393, guid: 3cf16f98258d616408577cf7883e52a5,
     type: 3}
 --- !u!60 &8610580127318596099
 PolygonCollider2D:
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 8083232179492254827}
   m_Layer: 0
   m_Name: Stone3
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
