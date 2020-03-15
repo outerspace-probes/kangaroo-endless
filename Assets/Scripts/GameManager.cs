@@ -10,10 +10,10 @@ public class GameManager : MonoBehaviour
     public float initGameSpeed = 100;
     public float powerupGameSpeed = 300;
     public float powerupTime = 5;
-
+    bool gameOver = false;
     public static GameManager instance;
     public GameObject gameOverPanel;
-    public Text scoreText;
+    public Text distanceText;
     public Text koalasText;
     public ParticleSystem playerPowerupParticles;
     [HideInInspector] public float gameSpeed = 100;
@@ -21,7 +21,11 @@ public class GameManager : MonoBehaviour
     int koalas = 0;
     [HideInInspector] public bool isPowerup = false;
     [HideInInspector] public float powerupTimeLeft = 0;
-    float powerupAcceleration = 150;
+    float powerupAcceleration = 150f;
+
+    float distanceCountingSpeed = 10f;
+    public float distanceTimeCounter = 100;
+    public int distance = 0;
 
     private void Awake()
     {
@@ -44,6 +48,19 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        // distance count
+        if (!gameOver)
+        {
+            distanceTimeCounter -= (distanceCountingSpeed * gameSpeed / 10) * Time.deltaTime;
+            if (distanceTimeCounter <= 0)
+            {
+                distanceTimeCounter = 100;
+                distance++;
+                distanceText.text = distance.ToString();
+            }
+        }
+
         if (isPowerup)
         {
             if(playerPowerupParticles.emission.enabled == false)
@@ -84,6 +101,8 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        gameOver = true;
+
         ObstacleSpawner.instance.gameOver = true;
         BgObjSpawner[] bgSpawners = FindObjectsOfType<BgObjSpawner>();
         foreach (BgObjSpawner spawner in bgSpawners)
@@ -141,8 +160,8 @@ public class GameManager : MonoBehaviour
 
     public void IncrementScore()
     {
-        score++;
-        scoreText.text = score.ToString();
+        // score++;
+        
     }
     public void IncrementKoalas()
     {
