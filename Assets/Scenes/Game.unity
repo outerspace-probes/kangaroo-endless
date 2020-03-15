@@ -924,6 +924,16 @@ PrefabInstance:
       propertyPath: playerPowerupParticles
       value: 
       objectReference: {fileID: 813322966}
+    - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
+        type: 3}
+      propertyPath: powerupGameSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
+        type: 3}
+      propertyPath: powerupTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4169476348656289784, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
         type: 3}
       propertyPath: m_Name
@@ -1016,7 +1026,12 @@ PrefabInstance:
     - target: {fileID: 5930102194900373289, guid: 8c33fca8281521a42816b1077963649a,
         type: 3}
       propertyPath: powerupChanceOneTo
-      value: 1
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930102194900373289, guid: 8c33fca8281521a42816b1077963649a,
+        type: 3}
+      propertyPath: koalaChanceOneTo
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5930102194900373290, guid: 8c33fca8281521a42816b1077963649a,
         type: 3}
@@ -1172,6 +1187,11 @@ PrefabInstance:
       propertyPath: jumpForceProgressBar
       value: 
       objectReference: {fileID: 1405293468}
+    - target: {fileID: 8973275648351966001, guid: e209f03c08d122f46aed8fd1eb050dfa,
+        type: 3}
+      propertyPath: jumpForceLoadingSpeed
+      value: 1200
+      objectReference: {fileID: 0}
     - target: {fileID: 8973275648351966004, guid: e209f03c08d122f46aed8fd1eb050dfa,
         type: 3}
       propertyPath: m_LocalPosition.x
