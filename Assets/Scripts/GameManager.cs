@@ -16,11 +16,13 @@ public class GameManager : MonoBehaviour
     public Text distanceText;
     public Text koalasText;
     public Text scoreInfoText;
+    public Text highScoreInfoText;
     public ParticleSystem playerPowerupParticles;
     [HideInInspector] public float gameSpeed = 100;
     int score = 0;
     int koalas = 0;
     int counterScore = 0;
+    int highScore = 0;
     [HideInInspector] public bool isPowerup = false;
     [HideInInspector] public float powerupTimeLeft = 0;
     float powerupAcceleration = 150f;
@@ -109,20 +111,13 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        score = distance + koalas * 10;
-        gameOver = true;
-
+        
         ObstacleSpawner.instance.gameOver = true;
         BgObjSpawner[] bgSpawners = FindObjectsOfType<BgObjSpawner>();
         foreach (BgObjSpawner spawner in bgSpawners)
         {
             spawner.gameOver = true;
         }
-
-        StopScrolling();
-        gameOverPanel.SetActive(true);
-
-        InvokeRepeating("IncScoreCounter", .5f, .01f);
 
         Obstacle[] obstacles = FindObjectsOfType<Obstacle>();
         foreach (Obstacle obj in obstacles)
@@ -148,16 +143,34 @@ public class GameManager : MonoBehaviour
             obj.gameOver = true;
         }
 
+        score = distance + koalas * 10;
+        gameOver = true;
+
+        StopScrolling();
+        gameOverPanel.SetActive(true);
+
+        InvokeRepeating("IncScoreCounter", .5f, .01f);
+
+        if(PlayerPrefs.HasKey("highScore"))
+        {
+            highScore = PlayerPrefs.GetInt("highScore");
+        }
+        if(score > highScore)
+        {
+            highScore = score;
+            PlayerPrefs.SetInt("highScore", highScore);
+        }
+        highScoreInfoText.text = highScore.ToString();
+
     }
 
     void IncScoreCounter()
-    {
-        scoreInfoText.text = counterScore.ToString();
+    {        
         if(counterScore < score)
         {
             counterScore++;
         }
-
+        scoreInfoText.text = counterScore.ToString();
     }
 
     void StopScrolling()

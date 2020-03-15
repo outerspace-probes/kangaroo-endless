@@ -65,7 +65,10 @@ public class ObstacleSpawner : MonoBehaviour
             if (spawnPwr == 1)
             {
                 yield return new WaitForSeconds(1 / gameSpeedFactor);
-                SpawnKoala();
+                if(!gameOver) {
+                    SpawnKoala();
+                }
+                
             }
 
             spawnPwr = Random.Range(1, powerupChanceOneTo + 1);
@@ -73,7 +76,9 @@ public class ObstacleSpawner : MonoBehaviour
             if (spawnPwr == 1)
             {
                 yield return new WaitForSeconds(Random.Range(1.5f,3) / gameSpeedFactor);
-                SpawnPowerup();
+                if(!gameOver) {
+                    SpawnPowerup();
+                }              
             }
 
             waitTime = Random.Range(waitTimeMin / gameSpeedFactor, waitTimeMax / gameSpeedFactor);
