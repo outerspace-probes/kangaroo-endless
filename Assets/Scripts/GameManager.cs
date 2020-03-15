@@ -15,10 +15,12 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverPanel;
     public Text distanceText;
     public Text koalasText;
+    public Text scoreInfoText;
     public ParticleSystem playerPowerupParticles;
     [HideInInspector] public float gameSpeed = 100;
     int score = 0;
     int koalas = 0;
+    int counterScore = 0;
     [HideInInspector] public bool isPowerup = false;
     [HideInInspector] public float powerupTimeLeft = 0;
     float powerupAcceleration = 150f;
@@ -61,6 +63,12 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        // score counter stop
+        if(gameOver && counterScore >= score)
+        {
+            CancelInvoke("IncScoreCounter");
+        }
+
         if (isPowerup)
         {
             if(playerPowerupParticles.emission.enabled == false)
@@ -101,6 +109,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        score = distance + koalas * 10;
         gameOver = true;
 
         ObstacleSpawner.instance.gameOver = true;
@@ -112,6 +121,8 @@ public class GameManager : MonoBehaviour
 
         StopScrolling();
         gameOverPanel.SetActive(true);
+
+        InvokeRepeating("IncScoreCounter", .5f, .01f);
 
         Obstacle[] obstacles = FindObjectsOfType<Obstacle>();
         foreach (Obstacle obj in obstacles)
@@ -125,8 +136,8 @@ public class GameManager : MonoBehaviour
             obj.gameOver = true;
         }
 
-        Koala[] koalas = FindObjectsOfType<Koala>();
-        foreach (Koala obj in koalas)
+        Koala[] koalasObjs = FindObjectsOfType<Koala>();
+        foreach (Koala obj in koalasObjs)
         {
             obj.gameOver = true;
         }
@@ -135,6 +146,16 @@ public class GameManager : MonoBehaviour
         foreach (PowerupStar obj in pwrups)
         {
             obj.gameOver = true;
+        }
+
+    }
+
+    void IncScoreCounter()
+    {
+        scoreInfoText.text = counterScore.ToString();
+        if(counterScore < score)
+        {
+            counterScore++;
         }
 
     }
