@@ -14,6 +14,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float jumpForceLoadingSpeed = 5;
     [SerializeField] ProgressBar jumpForceProgressBar;
     [SerializeField] GameObject exploParticlesPrefab;
+    [SerializeField] AudioClip jumpInSnd;
+    [SerializeField] [Range(0,1)] float jumpInSndVol = .7f;
+    [SerializeField] AudioClip jumpOutSnd;
+    [SerializeField] [Range(0, 1)] float jumpOutSndVol = .7f;
 
     private void Awake()
     {
@@ -41,6 +45,10 @@ public class PlayerController : MonoBehaviour
                 UpdateJumpForceProgressBar();
             }
         }
+        if(!gameOver && Input.GetMouseButtonDown(0))
+        {
+            AudioSource.PlayClipAtPoint(jumpInSnd, Camera.main.transform.position, jumpInSndVol);
+        }
 
     }
 
@@ -56,6 +64,8 @@ public class PlayerController : MonoBehaviour
         grounded = false;
         rbody.velocity = new Vector2(0,1 * jumpForce);
         animator.Play("PlayerJump");
+
+        AudioSource.PlayClipAtPoint(jumpOutSnd, Camera.main.transform.position, jumpOutSndVol);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

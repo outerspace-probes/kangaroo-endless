@@ -19,6 +19,10 @@ public class GameManager : MonoBehaviour
     public Text highScoreInfoText;
     public ParticleSystem playerPowerupParticles;
     [HideInInspector] public float gameSpeed = 100;
+    [SerializeField] AudioClip gameOverSnd;
+    [SerializeField] [Range(0, 1)] float gameOverSndVol = .7f;
+    [SerializeField] AudioSource musicPlayer;
+
     int score = 0;
     int koalas = 0;
     int counterScore = 0;
@@ -111,7 +115,9 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        
+        AudioSource.PlayClipAtPoint(gameOverSnd, Camera.main.transform.position, gameOverSndVol);
+        musicPlayer.Stop();
+
         ObstacleSpawner.instance.gameOver = true;
         BgObjSpawner[] bgSpawners = FindObjectsOfType<BgObjSpawner>();
         foreach (BgObjSpawner spawner in bgSpawners)
