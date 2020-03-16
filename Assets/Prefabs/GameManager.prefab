@@ -45,11 +45,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initGameSpeed: 100
   powerupGameSpeed: 600
-  powerupTime: 14
+  powerupTime: 11
   gameOverPanel: {fileID: 0}
-  scoreText: {fileID: 0}
+  distanceText: {fileID: 0}
   koalasText: {fileID: 0}
+  scoreInfoText: {fileID: 0}
+  highScoreInfoText: {fileID: 0}
   playerPowerupParticles: {fileID: 0}
   gameSpeed: 100
+  gameOverSnd: {fileID: 8300000, guid: f449e775ead4d3244a19c8bc6d1973e2, type: 3}
+  gameOverSndVol: 0.254
+  musicPlayer: {fileID: 0}
   isPowerup: 0
   powerupTimeLeft: 0
+  distanceTimeCounter: 100
+  distance: 0

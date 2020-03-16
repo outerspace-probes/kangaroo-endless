@@ -162,11 +162,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForceMin: 5
-  jumpForceMax: 12
-  jumpForceLoadingSpeed: 650
+  jumpForceMax: 11
+  jumpForceLoadingSpeed: 700
   jumpForceProgressBar: {fileID: 0}
   exploParticlesPrefab: {fileID: 17688579793629759, guid: 62fdd43e9df58a54fbe5d42f62773d21,
     type: 3}
+  jumpOutSnd: {fileID: 8300000, guid: 07147b1cd39b41c4a865ec556f74f540, type: 3}
+  jumpOutSndVol: 0.203
 --- !u!95 &8973275648351966006
 Animator:
   serializedVersion: 3

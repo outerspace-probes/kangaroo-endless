@@ -48,8 +48,8 @@ MonoBehaviour:
   hardWaitTimeMin: 2.4
   hardWaitTimeMax: 2.6
   hardnessIncreaseSpeed: 100
-  koalaChanceOneTo: 2
-  powerupChanceOneTo: 4
+  koalaChanceOneTo: 3
+  powerupChanceOneTo: 5
   waitTimeMin: 0
   waitTimeMax: 0
   koalaItem: {fileID: 8425832184956193429, guid: 889dc3bc3eb1c0b41991a3ad488abf46,

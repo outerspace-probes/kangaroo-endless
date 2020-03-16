@@ -44,8 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgObjects:
-  - {fileID: 2336403880873234815, guid: e8ffe31b7db04034bbfa94419c6605fd, type: 3}
+  - {fileID: 2336403880873234815, guid: a4e001e753fc2ae46abd9c878e31db0a, type: 3}
+  - {fileID: 2336403880873234815, guid: d5f8eeb5909269b42a909759a50db4ff, type: 3}
+  - {fileID: 2336403880873234815, guid: 8beaa30be762b3e49b1b573395cdebb0, type: 3}
   gameOver: 0
-  waitTimeMin: 8
-  waitTimeMax: 10
+  waitTimeMin: 0.5
+  waitTimeMax: 4
   moveSpeed: 1.63
