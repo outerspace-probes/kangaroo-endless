@@ -1434,7 +1434,7 @@ PrefabInstance:
     - target: {fileID: 5930102194900373289, guid: 8c33fca8281521a42816b1077963649a,
         type: 3}
       propertyPath: powerupChanceOneTo
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5930102194900373289, guid: 8c33fca8281521a42816b1077963649a,
         type: 3}
