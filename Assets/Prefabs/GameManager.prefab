@@ -47,6 +47,7 @@ MonoBehaviour:
   powerupGameSpeed: 600
   powerupTime: 11
   gameOverPanel: {fileID: 0}
+  obstacleSpawner: {fileID: 0}
   distanceText: {fileID: 0}
   koalasText: {fileID: 0}
   scoreInfoText: {fileID: 0}
@@ -55,8 +56,16 @@ MonoBehaviour:
   gameSpeed: 100
   gameOverSnd: {fileID: 8300000, guid: f449e775ead4d3244a19c8bc6d1973e2, type: 3}
   gameOverSndVol: 0.254
+  unlockSnd: {fileID: 8300000, guid: 8ff5c47417120f64c9e0cdb17b5ad7cb, type: 3}
+  unlockSndVol: 0.594
   musicPlayer: {fileID: 0}
   isPowerup: 0
   powerupTimeLeft: 0
   distanceTimeCounter: 100
   distance: 0
+  unlockedPowerupTime: 16
+  unlockedPowerupChance: 3
+  unlockKoalasNum: 50
+  unlockDistanceNum: 1500
+  unlockedKoalasMsg: {fileID: 0}
+  unlockedDistanceMsg: {fileID: 0}

@@ -586,7 +586,7 @@ PrefabInstance:
     - target: {fileID: 1010542337597653155, guid: 882b210cacd67f649b2b1ff1e190957e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1010542337597653155, guid: 882b210cacd67f649b2b1ff1e190957e,
         type: 3}
@@ -947,6 +947,11 @@ PrefabInstance:
       objectReference: {fileID: 141621292}
     - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
         type: 3}
+      propertyPath: obstacleSpawner
+      value: 
+      objectReference: {fileID: 5930102193632361064}
+    - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
+        type: 3}
       propertyPath: distanceText
       value: 
       objectReference: {fileID: 342145102}
@@ -977,16 +982,6 @@ PrefabInstance:
       objectReference: {fileID: 1093131931}
     - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
         type: 3}
-      propertyPath: obstacleSpawner
-      value: 
-      objectReference: {fileID: 5930102193632361064}
-    - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
-        type: 3}
-      propertyPath: unlockedPowerupTime
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
-        type: 3}
       propertyPath: unlockedKoalasMsg
       value: 
       objectReference: {fileID: 2045074142}
@@ -995,26 +990,6 @@ PrefabInstance:
       propertyPath: unlockedDistanceMsg
       value: 
       objectReference: {fileID: 1257243897}
-    - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
-        type: 3}
-      propertyPath: unlockKoalasNum
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
-        type: 3}
-      propertyPath: unlockDistanceNum
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
-        type: 3}
-      propertyPath: unlockSndVol
-      value: 0.594
-      objectReference: {fileID: 0}
-    - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
-        type: 3}
-      propertyPath: unlockSnd
-      value: 
-      objectReference: {fileID: 8300000, guid: 8ff5c47417120f64c9e0cdb17b5ad7cb, type: 3}
     - target: {fileID: 4169476348656289784, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
         type: 3}
       propertyPath: m_Name
@@ -1067,7 +1042,7 @@ PrefabInstance:
     - target: {fileID: 4927620637247957769, guid: e28c7ebe90e90554daef08843bf764ff,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4927620637247957769, guid: e28c7ebe90e90554daef08843bf764ff,
         type: 3}
@@ -1240,16 +1215,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7160573498116752454, guid: c8d5fe87d22b94346a8fd6e99dc9b2f3,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 886121bcc371360409166539a9737bc6, type: 3}
-    - target: {fileID: 7160573498116752454, guid: c8d5fe87d22b94346a8fd6e99dc9b2f3,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.554
-      objectReference: {fileID: 0}
     - target: {fileID: 7160573498116752455, guid: c8d5fe87d22b94346a8fd6e99dc9b2f3,
         type: 3}
       propertyPath: m_Name
@@ -1381,7 +1346,7 @@ PrefabInstance:
     - target: {fileID: 9071908807347449527, guid: af7e3ddb2cc946d48827e1fb8eb5f940,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9071908807347449527, guid: af7e3ddb2cc946d48827e1fb8eb5f940,
         type: 3}
