@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     bool gameOver = false;
     public static GameManager instance;
     public GameObject gameOverPanel;
+    public ObstacleSpawner obstacleSpawner;
     public Text distanceText;
     public Text koalasText;
     public Text scoreInfoText;
@@ -21,6 +22,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public float gameSpeed = 100;
     [SerializeField] AudioClip gameOverSnd;
     [SerializeField] [Range(0, 1)] float gameOverSndVol = .7f;
+    [SerializeField] AudioClip unlockSnd;
+    [SerializeField] [Range(0, 1)] float unlockSndVol = .7f;
     [SerializeField] AudioSource musicPlayer;
 
     int score = 0;
@@ -34,6 +37,16 @@ public class GameManager : MonoBehaviour
     float distanceCountingSpeed = 10f;
     public float distanceTimeCounter = 100;
     public int distance = 0;
+
+    // achievements
+    public float unlockedPowerupTime = 16;
+    public int unlockedPowerupChance = 3;
+    public int unlockKoalasNum = 50;
+    public int unlockDistanceNum = 1500;
+    [SerializeField] GameObject unlockedKoalasMsg;
+    [SerializeField] GameObject unlockedDistanceMsg;
+    bool unlockedKoalas = false;
+    bool unlockedDistance = false;
 
     private void Awake()
     {
@@ -51,6 +64,17 @@ public class GameManager : MonoBehaviour
 
         var em = playerPowerupParticles.emission;
         em.enabled = false;
+
+        if(PlayerPrefs.HasKey("AchievKoalasDone") && PlayerPrefs.GetInt("AchievKoalasDone") == 1)
+        {
+            powerupTime = unlockedPowerupTime;
+            unlockedKoalas = true;
+        }
+        if (PlayerPrefs.HasKey("AchievDistanceDone") && PlayerPrefs.GetInt("AchievDistanceDone") == 1)
+        {
+            obstacleSpawner.powerupChanceOneTo = unlockedPowerupChance;
+            unlockedDistance = true;
+        }
     }
 
     // Update is called once per frame
@@ -66,6 +90,15 @@ public class GameManager : MonoBehaviour
                 distanceTimeCounter = 100;
                 distance++;
                 distanceText.text = distance.ToString();
+                if (!unlockedDistance && distance == unlockDistanceNum)
+                {
+                    PlayerPrefs.SetInt("AchievDistanceDone", 1);
+                    unlockedDistance = true;
+                    obstacleSpawner.powerupChanceOneTo = unlockedPowerupChance;
+                    unlockedDistanceMsg.SetActive(true);
+                    Invoke("PlayUnlockSnd", .5f);
+                    Destroy(unlockedDistanceMsg, 4);
+                }
             }
         }
 
@@ -207,6 +240,20 @@ public class GameManager : MonoBehaviour
     {
         koalas++;
         koalasText.text = koalas.ToString();
+        if(!unlockedKoalas && koalas == unlockKoalasNum)
+        {
+            PlayerPrefs.SetInt("AchievKoalasDone",1);
+            unlockedKoalas = true;
+            powerupTime = unlockedPowerupTime;
+            unlockedKoalasMsg.SetActive(true);
+            Invoke("PlayUnlockSnd", .5f);
+            Destroy(unlockedKoalasMsg, 4);
+        }
+    }
+
+    void PlayUnlockSnd()
+    {
+        AudioSource.PlayClipAtPoint(unlockSnd, Camera.main.transform.position, unlockSndVol);
     }
 
     public void PowerUp()

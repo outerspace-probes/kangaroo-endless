@@ -121,8 +121,8 @@ MonoBehaviour:
   gameOver: 0
   exploParticles: {fileID: 1344189617571306393, guid: 3cf16f98258d616408577cf7883e52a5,
     type: 3}
-  itemSnd: {fileID: 8300000, guid: c407b6ecbacfe1643b94a05a55655d05, type: 3}
-  itemSndVol: 0.841
+  itemSnd: {fileID: 8300000, guid: 9bcf26b8719c9b84fb504482751cb2bf, type: 3}
+  itemSndVol: 0.561
 --- !u!60 &2277637407447262371
 PolygonCollider2D:
   m_ObjectHideFlags: 0

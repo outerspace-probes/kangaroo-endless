@@ -146,8 +146,8 @@ MonoBehaviour:
   gameOver: 0
   exploParticles: {fileID: 17688579793629759, guid: 987ebb25c5730ca41bbfbac8474051f7,
     type: 3}
-  itemSnd: {fileID: 8300000, guid: 1d3af98e362477f4f94ec65b164cb80e, type: 3}
-  itemSndVol: 0.452
+  itemSnd: {fileID: 8300000, guid: 813549c9a94be06468f6cb1d5bb7eb2f, type: 3}
+  itemSndVol: 0.254
 --- !u!1 &827164617064830689
 GameObject:
   m_ObjectHideFlags: 0

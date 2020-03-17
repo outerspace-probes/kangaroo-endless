@@ -256,6 +256,12 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 7160573497028418269}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1257243897 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1257243897, guid: b2eddcd957807484582983d631673e40,
+    type: 3}
+  m_PrefabInstance: {fileID: 1209623099706829340}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1274573789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -524,6 +530,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcd2a72ec7de0fa4ca638f21c0433ae5, type: 3}
+--- !u!1 &2045074142 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2045074142, guid: b2eddcd957807484582983d631673e40,
+    type: 3}
+  m_PrefabInstance: {fileID: 1209623099706829340}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1010542337988301488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -963,6 +975,46 @@ PrefabInstance:
       propertyPath: musicPlayer
       value: 
       objectReference: {fileID: 1093131931}
+    - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
+        type: 3}
+      propertyPath: obstacleSpawner
+      value: 
+      objectReference: {fileID: 5930102193632361064}
+    - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
+        type: 3}
+      propertyPath: unlockedPowerupTime
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
+        type: 3}
+      propertyPath: unlockedKoalasMsg
+      value: 
+      objectReference: {fileID: 2045074142}
+    - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
+        type: 3}
+      propertyPath: unlockedDistanceMsg
+      value: 
+      objectReference: {fileID: 1257243897}
+    - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
+        type: 3}
+      propertyPath: unlockKoalasNum
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
+        type: 3}
+      propertyPath: unlockDistanceNum
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
+        type: 3}
+      propertyPath: unlockSndVol
+      value: 0.594
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169476348656289783, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
+        type: 3}
+      propertyPath: unlockSnd
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ff5c47417120f64c9e0cdb17b5ad7cb, type: 3}
     - target: {fileID: 4169476348656289784, guid: 4a69aefa39c44d84681acdd8f4b7a36a,
         type: 3}
       propertyPath: m_Name
@@ -1114,6 +1166,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c33fca8281521a42816b1077963649a, type: 3}
+--- !u!114 &5930102193632361064 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5930102194900373289, guid: 8c33fca8281521a42816b1077963649a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5930102193632361063}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff0e3ab71a5a2d49a22352805e35a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7160573497028418269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1175,6 +1239,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160573498116752454, guid: c8d5fe87d22b94346a8fd6e99dc9b2f3,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 886121bcc371360409166539a9737bc6, type: 3}
+    - target: {fileID: 7160573498116752454, guid: c8d5fe87d22b94346a8fd6e99dc9b2f3,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.554
       objectReference: {fileID: 0}
     - target: {fileID: 7160573498116752455, guid: c8d5fe87d22b94346a8fd6e99dc9b2f3,
         type: 3}

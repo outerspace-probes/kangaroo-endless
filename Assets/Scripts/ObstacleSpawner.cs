@@ -12,7 +12,7 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] float hardWaitTimeMax = 2.6f;
     [SerializeField] float hardnessIncreaseSpeed = 100;
     [SerializeField] int koalaChanceOneTo = 3;
-    [SerializeField] int powerupChanceOneTo = 3;
+    [SerializeField] public int powerupChanceOneTo = 3;
     [SerializeField] float waitTimeMin;
     [SerializeField] float waitTimeMax;
 
