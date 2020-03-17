@@ -551,21 +551,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2462731697005002574, guid: da069827675c6834492800a75700ceba,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 21.797342
-      objectReference: {fileID: 0}
-    - target: {fileID: 2462731697005002574, guid: da069827675c6834492800a75700ceba,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 11.706413
-      objectReference: {fileID: 0}
-    - target: {fileID: 2462731697005002574, guid: da069827675c6834492800a75700ceba,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 11.706413
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da069827675c6834492800a75700ceba, type: 3}
 --- !u!1001 &2630526769532341962
@@ -575,10 +560,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1936780196, guid: 83335abca9d61ef4f806d841559266e1, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -489
-      objectReference: {fileID: 0}
     - target: {fileID: 2630526768630851251, guid: 83335abca9d61ef4f806d841559266e1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
