@@ -12,6 +12,8 @@ public class StartMenuController : MonoBehaviour
     [SerializeField] GameObject achievKoalasIconChecked;
     [SerializeField] GameObject achievDistanceIconLock;
     [SerializeField] GameObject achievDistanceIconChecked;
+    [SerializeField] GameObject PopupAchievements;
+    [SerializeField] GameObject PopupTutorial;
 
     private void Start()
     {
@@ -38,6 +40,23 @@ public class StartMenuController : MonoBehaviour
         {
             achievDistanceIconLock.SetActive(true);
         }
+    }
+
+    public void ShowTutorialPopup()
+    {
+        PopupTutorial.SetActive(true);
+    }
+    public void HideTutorialPopup()
+    {
+        PopupTutorial.SetActive(false);
+    }
+    public void ShowAchievementsPopup()
+    {
+        PopupAchievements.SetActive(true);
+    }
+    public void HideAchievementsPopup()
+    {
+        PopupAchievements.SetActive(false);
     }
 
     public void PlayGame()
