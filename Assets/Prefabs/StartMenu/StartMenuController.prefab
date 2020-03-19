@@ -48,3 +48,5 @@ MonoBehaviour:
   achievKoalasIconChecked: {fileID: 0}
   achievDistanceIconLock: {fileID: 0}
   achievDistanceIconChecked: {fileID: 0}
+  PopupAchievements: {fileID: 0}
+  PopupTutorial: {fileID: 0}
