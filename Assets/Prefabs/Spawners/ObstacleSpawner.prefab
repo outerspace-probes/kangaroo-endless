@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5930102194900373291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5930102194900373290}
+  - component: {fileID: 5930102194900373289}
+  m_Layer: 0
+  m_Name: ObstacleSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5930102194900373290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5930102194900373291}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.34, y: -4.3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5930102194900373289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5930102194900373291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff0e3ab71a5a2d49a22352805e35a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  easyWaitTimeMin: 4.2
+  easyWaitTimeMax: 6
+  hardWaitTimeMin: 2.4
+  hardWaitTimeMax: 2.6
+  hardnessIncreaseSpeed: 100
+  koalaChanceOneTo: 3
+  powerupChanceOneTo: 5
+  waitTimeMin: 0
+  waitTimeMax: 0
+  koalaItem: {fileID: 8425832184956193429, guid: 889dc3bc3eb1c0b41991a3ad488abf46,
+    type: 3}
+  powerupItem: {fileID: 827164617064830689, guid: 1aaf3b2624080234eb92cdccbd72d423,
+    type: 3}
+  obstacles:
+  - {fileID: 844584400739486006, guid: 2871bd4b658fb4847b89d6702ee52fe7, type: 3}
+  - {fileID: 5942911879979258274, guid: 086faf6b63d537d42885e6800542b65d, type: 3}
+  - {fileID: 8629962912050367463, guid: 11c3606bf645275479ea57cd794a360f, type: 3}
+  gameOver: 0
