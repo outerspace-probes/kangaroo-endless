@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     int highScore = 0;
     [HideInInspector] public bool isPowerup = false;
     [HideInInspector] public float powerupTimeLeft = 0;
-    float powerupAcceleration = 150f;
+    float powerupAcceleration = 170f;
 
     float distanceCountingSpeed = 10f;
     public float distanceTimeCounter = 100;
